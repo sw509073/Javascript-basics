@@ -1,0 +1,25 @@
+<html>
+    <head>JS</head>
+    <body>
+         <p id="demo"></p>
+    </body>
+    <script>
+        let cars = ["Honda","Bonda","Soda"];
+        let games = ["GTA","VALO","PUBG"];
+        document.getElementById("demo").innerHTML = cars;
+        // cars.forEach((item,index)=>{
+        //     alert(item +" i="+ index);
+        // });
+        let newarr = cars.concat(games);
+        document.getElementById("demo").innerHTML = newarr;
+        let num1 = [1, 2, 3, 4, 5]; 
+        let num2 = num1.map(val => val * 2);
+        // let num2 = num1.map(function(val) {
+        //     return val * 2;
+        // });
+       document.getElementById("demo").innerHTML = num2;
+
+
+    </script>
+
+</html>

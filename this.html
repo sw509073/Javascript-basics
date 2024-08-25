@@ -1,0 +1,28 @@
+<html>
+    <head>JS this</head>
+    <body>
+         <p id="demo"></p>
+    </body>
+    <script>
+        var marks = 50;
+        const calculate = ()=>{
+            var marks = 100;
+            console.log(marks);
+            console.log(this.marks);
+        };
+        calculate();
+
+        const dict = {
+            name: "GAme",
+            arr : ["JS","Nodejs","expressJS"],
+            info(){
+                this.arr.forEach((item)=>{
+                    console.log(this.name,item);
+                })
+            }
+        }
+        dict.info();
+      
+    </script>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>JS Objects</head>
+    <body>
+         <p id="demo"></p>
+         <button id = 'btn'>click</button>
+    </body>
+    <script>
+       var object = {
+        name:"Satvik",
+        age:11,
+        get agge(){
+            return this.age;
+        }
+       }
+       function mesge(){
+        alert("HI");
+       };
+       object.messgae = mesge;
+       document.getElementById("demo").innerHTML = object.name+" "+object.agge;
+       document.getElementById("btn").onclick  =object.messgae;
+
+
+
+    </script>
+
+</html>

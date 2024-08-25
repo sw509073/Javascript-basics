@@ -1,0 +1,45 @@
+<html>
+    <head>JS asynchronous functions</head>
+    <body>
+         <p id="demo"></p>
+    </body>
+    <script>
+
+      let result = function(score){
+        return new Promise(function(resolve, resject){
+            console.log("Calculating results...");
+            if (score>50) resolve("Congrats ! You have passed");
+            else reject("Failed !");
+        })
+      }
+      let grade = function(res){
+        return new Promise(function(resolve,reject){
+            console.log("Calcutaing grade...");
+            resolve("Your grade is A"+ res);
+
+        })
+      }
+    //   result(40).then(response=>{
+    //     console.log("Results recieved");
+    //     return grade(response)
+    //   }).then(finalGrade=>{
+    //     console.log(finalGrade)
+
+    //   }).catch(err=>{
+    //     console.log(err);
+    //   })
+    async function calculate(){
+        try{
+        const res = await result(40);
+        console.log("Results recieved")
+        const finalGrade = await grade(res);
+        console.log(finalGrade);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    calculate();
+    </script>
+
+</html>
